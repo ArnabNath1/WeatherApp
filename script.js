@@ -43,8 +43,15 @@ const apiKey = "4d7da5d54760dffb79d44d3490a2cd29";
 			
 		}
 
+		searchBox.addEventListener("keypress", function(event) {
+		  if (event.key === "Enter") {
+		    event.preventDefault();
+		    checkWeather(searchBox.value);
+		  }
+		});
+
 		searchBtn.addEventListener("click", ()=> {
 			checkWeather(searchBox.value);
-		})
+		});
 
 				
